@@ -1,27 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// src/components/UserList.js
 
-const UserList = () => {
-  const [users, setUsers] = useState([]);
+import React from 'react';
 
-  useEffect(() => {
-    // Fetch users from the backend
-    axios.get('http://localhost:3000/')
-      .then(response => {
-        setUsers(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the users!', error);
-      });
-  }, []);
-
+const UserList = ({ users }) => {
+  console.log(users);
   return (
     <div>
       <h1>User List</h1>
       <ul>
         {users.map(user => (
-          <li key={user.id}>
-            {user.name} - {user.age} - {user.address}
+          <li key={user._id}>
+            {user.name} ({user.age}) - {Array.isArray(user.address) ? user.address.join(', ') : user.address}
           </li>
         ))}
       </ul>
