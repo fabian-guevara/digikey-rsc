@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 // Connection URI for your MongoDB Atlas cluster
-const uri = 'mongodb+srv://test:123@digikey-cert.f1jabk2.mongodb.net/?retryWrites=true&w=majority&appName=DigiKey-Cert';
+const uri = 'PUT_YOUR_MONGODB_CONNECTION_STRING_HERE';
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
