@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Add styles for the search container */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+  margin-bottom: 20px; /* Space below the search bar */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Style for the search input */
+.search-input {
+  flex: 1; /* Make input take up remaining space */
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  margin-right: 10px; /* Space between input and button */
+}
+
+/* Style for the search results */
+.search-results {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  max-height: 200px; /* Limit height */
+  overflow-y: auto; /* Add scrollbar if needed */
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background */
+}
+
+/* Style for individual result items */
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #e9ecef; /* Light gray border between items */
+}
+
+/* Remove bottom border for the last item */
+.search-results li:last-child {
+  border-bottom: none;
 }

@@ -35,7 +35,7 @@ const AddUser = ({ onUserAdded }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='add-user-form' onSubmit={handleSubmit}>
       <div>
         <label>Name:</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />

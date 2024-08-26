@@ -5,8 +5,7 @@ import React from 'react';
 const UserList = ({ users }) => {
   console.log(users);
   return (
-    <div>
-      <h1>User List</h1>
+    <div className='userList'>
       <ul>
         {users.map(user => (
           <li key={user._id}>

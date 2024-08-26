@@ -1,0 +1,14 @@
+{
+  "name": "digikey-rsc",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm start --prefix backend",
+    "client": "cd frontend && npm install && npm start",
+    "seed": "cd backend && npm install && node seed.js",
+    "start:all": "npm run seed && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
