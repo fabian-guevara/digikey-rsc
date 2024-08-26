@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './index.css'; // Ensure this is the correct path to your CSS file
 
-const SearchBar = ({ onResults }) => {
+const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [results, setResults] = useState([]);
 
@@ -13,12 +13,12 @@ const SearchBar = ({ onResults }) => {
 
   const handleSearchClick = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/search', {
-        query: searchQuery,
+      const response = await axios.post('http://localhost:5000/search', {
+        params: { query: searchQuery }
       });
 
       setResults(response.data);
-      onResults(response.data);
+
     } catch (error) {
       console.error('Error fetching search results:', error);
     }
@@ -33,7 +33,7 @@ const SearchBar = ({ onResults }) => {
         value={searchQuery}
         onChange={handleSearchChange}
       />
-      <button onClick={handleSearchClick}>Search</button>
+      <button className='searchBtn' onClick={handleSearchClick}>Search</button>
       {results.length > 0 && (
         <ul className="search-results">
           {results.map(user => (

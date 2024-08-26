@@ -8,7 +8,7 @@ import SearchBar from './SearchBar';
 
 const App = () => {
   const [users, setUsers] = useState([]);
-  const [searchResults, setSearchResults] = useState([]);
+
   const fetchUsers = async () => {
     try {
       const response = await axios.get('http://localhost:5000/');
@@ -28,18 +28,7 @@ const App = () => {
   };
 
 
-  const handleSearchResults = async (searchQuery) => {
-    try {
-      const response = await axios.post('http://localhost:3000/search', {
-        query: searchQuery,
-      });
-
-      setSearchResults(response.data);
-      // onResults(response.data);
-    } catch (error) {
-      console.error('Error fetching search results:', error);
-    }
-  };
+  
   return (
     <div className="container">
     <div className="main-layout">
@@ -55,8 +44,9 @@ const App = () => {
         </div>
       </div>
       
-      {/* Search bar */}
-      <SearchBar onResults={handleSearchResults} />
+      {/* Search for a user: */}
+      <SearchBar  />
+      
     </div>
   </div>
 );

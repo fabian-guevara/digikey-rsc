@@ -1,18 +1,38 @@
+body {
+  padding: 1%;
+}
+
 /* Add styles for the search container */
 .search-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 10px; /* Space between input and button */
   margin-bottom: 20px; /* Space below the search bar */
+  /* max-width: 40%; */
+  margin-top: 20px;
+  border: solid rgb(64, 62, 62);
+  padding: 1%;
+  border-radius: 8px;
+  width: 25%;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between input and button */
+  margin-bottom: 20px; /* Space below the search bar */
+  /* max-width: 40%; */
+  margin-top: 20px;
+  border: solid rgb(64, 62, 62);
+  padding: 1%;
+  border-radius: 8px;
 }
 
 /* Style for the search input */
-.search-input {
-  flex: 1; /* Make input take up remaining space */
+input {
   padding: 10px;
   border: 1px solid #ced4da; /* Light gray border */
   border-radius: 8px; /* Rounded corners */
-  margin-right: 10px; /* Space between input and button */
 }
 
 /* Style for the search results */
@@ -36,4 +56,49 @@
 /* Remove bottom border for the last item */
 .search-results li:last-child {
   border-bottom: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.searchBtn {
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #007bff; /* Bootstrap blue */
+  color: white;
+  cursor: pointer;
+}
+
+.add-user-form {
+  display: flex;
+  gap: 10px; /* Space between input and button */
+  margin-bottom: 20px; /* Space below the search bar */
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.new-user-input{
+  display: flex;
+  align-self: flex-end;
+}
+
+#add-user{
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #007bff; /* Bootstrap blue */
+  color: white;
+  cursor: pointer;
+  max-width: 25%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
 }

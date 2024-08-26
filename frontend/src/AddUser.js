@@ -37,18 +37,15 @@ const AddUser = ({ onUserAdded }) => {
   return (
     <form className='add-user-form' onSubmit={handleSubmit}>
       <div>
-        <label>Name:</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+        <input className='new-user-input' placeholder='Name' type="text" value={name} onChange={(e) => setName(e.target.value)} required />
       </div>
       <div>
-        <label>Age:</label>
-        <input type="number" value={age} onChange={(e) => setAge(e.target.value)} required />
+        <input className='new-user-input' placeholder='Age' type="number" value={age} onChange={(e) => setAge(e.target.value)} required />
       </div>
       <div>
-        <label>Address:</label>
-        <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} required />
+        <input className='new-user-input' placeholder='Address' type="text"  value={address} onChange={(e) => setAddress(e.target.value)} required />
       </div>
-      <button type="submit">Add User</button>
+      <button id='add-user' type="submit">Add User</button>
     </form>
   );
 };
