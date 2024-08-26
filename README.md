@@ -1,6 +1,18 @@
+
+
 # Digikey RSC
 
 Welcome to the Digikey RSC project! This repository contains both a backend server built with Node.js and Express, and a frontend application built with React. The project demonstrates a simple user management system where users can be added and viewed via a web interface.
+
+#TL;DR
+
+1. Install Node.js
+2. Go to the root of the project
+3. Install all the dependencies
+   `npm install`
+4. Run and Enjoy
+   `npm run start:all`
+
 
 ## Table of Contents
 
