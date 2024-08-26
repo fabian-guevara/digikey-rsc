@@ -119,14 +119,16 @@ npm install`
 
 Here’s a brief overview of the API endpoints provided by the backend:
 
-- **GET /users**: Fetch all users.
+- **GET /**: Fetch all users.
   - **Response**: `200 OK` with a JSON array of user objects.
 
-- **POST /users**: Add a new user.
+- **POST /**: Add a new user.
   - **Request Body**: `{ "name": "string", "age": number, "address": "string or array", "userLogins": [ { "id": "ObjectId", "username": "string" } ] }`
   - **Response**: `201 Created` with a JSON object of the newly added user.
 
-
+- **GET /search**: Fetch search results.
+  - **Request Body**: `{ params: { query: "string" } }`
+  - **Response**: `200 OK` with a JSON array of user objects.
 
 ## You should be presented with this UI when running 
 <img width="1138" alt="image" src="https://github.com/user-attachments/assets/4048981e-5634-47b2-b076-d63fea8e0ab1">
