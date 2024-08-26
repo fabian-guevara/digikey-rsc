@@ -127,6 +127,11 @@ Here’s a brief overview of the API endpoints provided by the backend:
   - **Response**: `201 Created` with a JSON object of the newly added user.
 
 
+
+## You should be presented with this UI when running 
+<img width="1138" alt="image" src="https://github.com/user-attachments/assets/4048981e-5634-47b2-b076-d63fea8e0ab1">
+
+
 ---
 
 Feel free to reach out if you have any questions or issues with the setup. Happy coding!
