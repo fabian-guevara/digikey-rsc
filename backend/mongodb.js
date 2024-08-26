@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 // Connection URI for your MongoDB Atlas cluster
-const uri = 'mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://test:123@digikey-cert.f1jabk2.mongodb.net/?retryWrites=true&w=majority&appName=DigiKey-Cert';
 
 // Create a new MongoClient
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -15,5 +15,7 @@ client.connect((err) => {
     console.log('Connected to MongoDB Atlas');
 
     // Export the client for other modules to use
-    module.exports = client;
+    
 });
+
+module.exports = client;
