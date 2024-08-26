@@ -5,7 +5,7 @@ const { MongoClient } = require('mongodb');
 const uri = 'mongodb+srv://test:123@digikey-cert.f1jabk2.mongodb.net/?retryWrites=true&w=majority&appName=DigiKey-Cert';
 
 // Create a new MongoClient
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri);
 
 const { faker } = require('@faker-js/faker');
 
@@ -15,7 +15,6 @@ const dbName = 'digiKey-dev'; // Replace with your database name
 
 (async function seedDatabase() {
    
-  
     try {
 
       console.log('Connected to the database');

@@ -25,7 +25,7 @@ const postUser = async (req, res, next) => {
         const result = await collection.findOneAndUpdate( filter , update , options );
 
         // Send the results as the response
-        res.json(result);
+        res.status(201).json(result);
     } catch (error) {
         // Handle any errors
         console.error('Error:', error);

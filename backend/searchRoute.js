@@ -31,9 +31,9 @@ const searchRoute = async (req, res, next) => {
 
         // use the aggregation pipeline to search the collection and limit to 5 results
         
-        const results = await collection.aggregate([searchStage(query)]).limit(5).toArray();  
+        const results = await collection.aggregate([searchStage(query)]).limit(10).toArray();  
 
-        res.json(results);
+        res.status(200).json(results);
     } catch (error) {    
         console.error('Error:', error);
         res.status(500).json({ error: 'Internal Server Error' });

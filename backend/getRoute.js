@@ -14,7 +14,7 @@ const getAllUsers = async (req, res, next) => {
         const results = await collection.find({}).limit(10).toArray();
 
             // Send the results as the response
-        res.json(results);
+        res.status(200).json(results);
     } catch (error) {
         // Handle any errors
         console.error('Error:', error);
