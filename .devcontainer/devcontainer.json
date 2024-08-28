@@ -1,0 +1,27 @@
+{
+  // NodeJS development image
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:dev-20",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "/bin/bash .devcontainer/updateContent.sh",
+  "postCreateCommand": "",
+  "postAttachCommand": {
+    "server": "npm install && npm run start:all"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "backend/index.js"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend",
+      "onAutoForward": "openPreview"
+    },
+    "5000": {
+      "label": "Backend"
+    }
+  },
+  "forwardPorts": [3000, 5000]
+}
