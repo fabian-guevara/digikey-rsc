@@ -1,7 +1,10 @@
 const { MongoClient } = require('mongodb');
 
 // Connection URI for your MongoDB Atlas cluster
-const uri = 'PUT_YOUR_MONGODB_CONNECTION_STRING_HERE';
+// add it to a .env file inside this folder
+// example .env file
+// DATABASE_URI=mongodb+srv://...
+const uri = process.env.DATABASE_URI;
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
