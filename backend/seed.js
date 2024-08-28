@@ -1,8 +1,10 @@
 // seed.js
+require('dotenv').config();
+
 const { MongoClient } = require('mongodb');
 
 // Connection URI for your MongoDB Atlas cluster
-const uri = 'mongodb+srv://test:123@digikey-cert.f1jabk2.mongodb.net/?retryWrites=true&w=majority&appName=DigiKey-Cert';
+const uri = process.env.DATABASE_URI;
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
@@ -17,7 +19,7 @@ const dbName = 'digiKey-dev'; // Replace with your database name
    
     try {
 
-      console.log('Connected to the database');
+      console.log('Connected to the database ' + uri);
   
       const db = client.db(dbName);
   
